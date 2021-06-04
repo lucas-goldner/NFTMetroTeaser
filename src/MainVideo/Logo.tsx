@@ -6,7 +6,7 @@ export const Logo: React.FC<{
 	const videoConfig = useVideoConfig();
 	const frame = useCurrentFrame();
 
-	const opacity = frame / 4 >= 20 ? 1 : frame / 20;
+	const opacity = frame / 4.5 >= 20 ? 1 : frame / 80;
 
 	return (
 		<div
