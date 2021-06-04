@@ -28,10 +28,10 @@ export const MainVideo: React.FC<{
 				<Sequence from={0} durationInFrames={videoConfig.durationInFrames}>
 					<Logo transitionStart={transitionStart} />
 				</Sequence>
-				<Sequence from={transitionStart + 10} durationInFrames={Infinity}>
+				<Sequence from={transitionStart + 500} durationInFrames={Infinity}>
 					<Title titleText={titleText} titleColor={titleColor} />
 				</Sequence>
-				<Sequence from={transitionStart + 50} durationInFrames={Infinity}>
+				<Sequence from={transitionStart + 500} durationInFrames={Infinity}>
 					<Subtitle />
 				</Sequence>
 				<Sequence from={0} durationInFrames={Infinity}>
