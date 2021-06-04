@@ -3,7 +3,7 @@ import {useCurrentFrame} from 'remotion';
 export const Logo: React.FC<{}> = () => {
 	const frame = useCurrentFrame();
 
-	const opacity = frame / 4.5 >= 20 ? 1 : frame / 80;
+	const scale = frame / 4.5 >= 20 ? 0.6 : frame / 80;
 
 	return (
 		<div
@@ -12,12 +12,11 @@ export const Logo: React.FC<{}> = () => {
 				alignItems: 'center',
 				alignContent: 'center',
 				width: '100%',
-
 				display: 'flex',
 			}}
 		>
 			<svg
-				style={{transform: 'scale(' + opacity + ')', marginLeft: 150}}
+				style={{transform: 'scale(' + scale + ')', marginLeft: 75}}
 				xmlns="http://www.w3.org/2000/svg"
 				width="1364"
 				height="1364"

@@ -19,8 +19,9 @@ export const ConfettiEffect: React.FC = () => {
 		pointerEvents: 'none',
 		width: '100%',
 		height: '100%',
-		top: 0,
+		top: 300,
 		left: 0,
+		zIndex: 50,
 	};
 
 	const getAnimationSettings = (originXA: number, originXB: number) => {
@@ -58,6 +59,9 @@ export const ConfettiEffect: React.FC = () => {
 		<ReactCanvasConfetti
 			refConfetti={(ref) => getInstance(ref)}
 			style={canvasStyles}
+			particleCount={1000}
+			ticks={500}
+			spread={10}
 		/>
 	);
 };

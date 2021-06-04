@@ -20,19 +20,22 @@ export const MainVideo: React.FC<{
 			extrapolateRight: 'clamp',
 		}
 	);
+
 	const transitionStart = 25;
+	const transitionPop = 88;
 	const transitionDone = 94;
+	const slideAway = 178;
 
 	return (
 		<div style={{flex: 1, backgroundColor: 'white'}}>
 			<div style={{opacity}}>
-				<Sequence from={0} durationInFrames={videoConfig.durationInFrames}>
+				<Sequence from={0} durationInFrames={slideAway}>
 					<Logo />
 				</Sequence>
-				<Sequence from={transitionDone} durationInFrames={Infinity}>
+				<Sequence from={transitionDone} durationInFrames={84}>
 					<Title titleText={titleText} titleColor={titleColor} />
 				</Sequence>
-				<Sequence from={transitionDone} durationInFrames={Infinity}>
+				<Sequence from={transitionPop} durationInFrames={slideAway}>
 					<ConfettiEffect />
 				</Sequence>
 				<Sequence from={0} durationInFrames={Infinity}>
