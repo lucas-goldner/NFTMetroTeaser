@@ -3,6 +3,7 @@ import {MainVideo} from './MainVideo';
 import {BGTheme} from './MainVideo/BGTheme';
 import {ConfettiEffect} from './MainVideo/ConfettiEffect';
 import {Logo} from './MainVideo/Logo';
+import {PhoneScene} from './MainVideo/PhoneScene';
 import {Title} from './MainVideo/Title';
 
 export const RemotionVideo: React.FC = () => {
@@ -55,6 +56,18 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				width={1920}
 				height={1080}
+			/>
+			<Composition
+				id="PhoneScene"
+				component={PhoneScene}
+				durationInFrames={300}
+				fps={30}
+				width={1280}
+				height={720}
+				defaultProps={{
+					videoSrc: 'phone',
+					baseScale: 1,
+				}}
 			/>
 		</>
 	);

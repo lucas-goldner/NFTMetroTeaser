@@ -2,6 +2,7 @@ import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
 import {BGTheme} from './MainVideo/BGTheme';
 import {ConfettiEffect} from './MainVideo/ConfettiEffect';
 import {Logo} from './MainVideo/Logo';
+import {PhoneScene} from './MainVideo/PhoneScene';
 import {Title} from './MainVideo/Title';
 
 export const MainVideo: React.FC<{
@@ -40,6 +41,9 @@ export const MainVideo: React.FC<{
 				</Sequence>
 				<Sequence from={0} durationInFrames={Infinity}>
 					<BGTheme />
+				</Sequence>
+				<Sequence from={180} durationInFrames={Infinity}>
+					<PhoneScene videoSrc={'phone'} baseScale={1} />
 				</Sequence>
 			</div>
 		</div>

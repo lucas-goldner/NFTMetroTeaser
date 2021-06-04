@@ -20,6 +20,7 @@
 		"@remotion/three": "^2.1.7",
 		"@types/express": "^4.17.9",
 		"@types/react": "^17.0.0",
+		"@types/three": "^0.129.1",
 		"eslint": "^7.15.0",
 		"express": "^4.17.1",
 		"prettier": "^2.2.1",
