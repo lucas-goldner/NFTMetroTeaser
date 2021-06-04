@@ -1,4 +1,5 @@
-import {Composition} from 'remotion';
+import {Audio, Composition} from 'remotion';
+import bgMusic from '../assets/sounds/TeaserTheme.mp3';
 import {HelloWorld} from './HelloWorld';
 import {Logo} from './HelloWorld/Logo';
 import {Subtitle} from './HelloWorld/Subtitle';
@@ -47,6 +48,7 @@ export const RemotionVideo: React.FC = () => {
 				width={1920}
 				height={1080}
 			/>
+			<Audio src={bgMusic} />
 		</>
 	);
 };
