@@ -1,4 +1,5 @@
 import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
+import {BGTheme} from './BGTheme';
 import {Logo} from './MainVideo/Logo';
 import {Subtitle} from './MainVideo/Subtitle';
 import {Title} from './MainVideo/Title';
@@ -32,6 +33,9 @@ export const MainVideo: React.FC<{
 				</Sequence>
 				<Sequence from={transitionStart + 50} durationInFrames={Infinity}>
 					<Subtitle />
+				</Sequence>
+				<Sequence from={0} durationInFrames={Infinity}>
+					<BGTheme />
 				</Sequence>
 			</div>
 		</div>

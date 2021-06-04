@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {BGTheme} from './BGTheme';
 import {MainVideo} from './MainVideo';
 import {Logo} from './MainVideo/Logo';
 import {Subtitle} from './MainVideo/Subtitle';
@@ -49,7 +50,7 @@ export const RemotionVideo: React.FC = () => {
 			/>
 			<Composition
 				id="BGTheme"
-				component={Subtitle}
+				component={BGTheme}
 				durationInFrames={100}
 				fps={30}
 				width={1920}
