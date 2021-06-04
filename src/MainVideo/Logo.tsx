@@ -1,9 +1,6 @@
-import {useCurrentFrame, useVideoConfig} from 'remotion';
+import {useCurrentFrame} from 'remotion';
 
-export const Logo: React.FC<{
-	transitionStart: number;
-}> = ({transitionStart}) => {
-	const videoConfig = useVideoConfig();
+export const Logo: React.FC<{}> = () => {
 	const frame = useCurrentFrame();
 
 	const opacity = frame / 4.5 >= 20 ? 1 : frame / 80;
@@ -15,11 +12,12 @@ export const Logo: React.FC<{
 				alignItems: 'center',
 				alignContent: 'center',
 				width: '100%',
+
 				display: 'flex',
 			}}
 		>
 			<svg
-				style={{transform: 'scale(' + opacity + ')'}}
+				style={{transform: 'scale(' + opacity + ')', marginLeft: 150}}
 				xmlns="http://www.w3.org/2000/svg"
 				width="1364"
 				height="1364"

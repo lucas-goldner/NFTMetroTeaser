@@ -1,8 +1,8 @@
 import {Composition} from 'remotion';
-import {BGTheme} from './BGTheme';
 import {MainVideo} from './MainVideo';
+import {BGTheme} from './MainVideo/BGTheme';
+import {ConfettiEffect} from './MainVideo/ConfettiEffect';
 import {Logo} from './MainVideo/Logo';
-import {Subtitle} from './MainVideo/Subtitle';
 import {Title} from './MainVideo/Title';
 
 export const RemotionVideo: React.FC = () => {
@@ -11,19 +11,19 @@ export const RemotionVideo: React.FC = () => {
 			<Composition
 				id="MainVideo"
 				component={MainVideo}
-				durationInFrames={150}
+				durationInFrames={805}
 				fps={30}
 				width={1920}
 				height={1080}
 				defaultProps={{
-					titleText: 'Welcome to Remotion',
+					titleText: 'New NFT-Metro update',
 					titleColor: 'black',
 				}}
 			/>
 			<Composition
 				id="Logo"
 				component={Logo}
-				durationInFrames={200}
+				durationInFrames={500}
 				fps={30}
 				width={1920}
 				height={1080}
@@ -41,8 +41,8 @@ export const RemotionVideo: React.FC = () => {
 				}}
 			/>
 			<Composition
-				id="Subtitle"
-				component={Subtitle}
+				id="ConfettiEffect"
+				component={ConfettiEffect}
 				durationInFrames={100}
 				fps={30}
 				width={1920}

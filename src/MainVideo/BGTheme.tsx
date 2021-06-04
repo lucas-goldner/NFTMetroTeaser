@@ -1,5 +1,5 @@
 import {Audio, interpolate, useCurrentFrame} from 'remotion';
-import bgTheme from '../assets/sounds/TeaserTheme.mp3';
+import bgTheme from '../../assets/sounds/TeaserTheme.mp3';
 
 export const BGTheme = () => {
 	const frame = useCurrentFrame();

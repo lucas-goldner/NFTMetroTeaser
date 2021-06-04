@@ -15,7 +15,7 @@ export const Title: React.FC<{
 				fontSize: 100,
 				textAlign: 'center',
 				position: 'absolute',
-				bottom: 160,
+				bottom: 10,
 				width: '100%',
 			}}
 		>

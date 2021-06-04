@@ -1,7 +1,7 @@
 import {interpolate, Sequence, useCurrentFrame, useVideoConfig} from 'remotion';
-import {BGTheme} from './BGTheme';
+import {BGTheme} from './MainVideo/BGTheme';
+import {ConfettiEffect} from './MainVideo/ConfettiEffect';
 import {Logo} from './MainVideo/Logo';
-import {Subtitle} from './MainVideo/Subtitle';
 import {Title} from './MainVideo/Title';
 
 export const MainVideo: React.FC<{
@@ -21,18 +21,19 @@ export const MainVideo: React.FC<{
 		}
 	);
 	const transitionStart = 25;
+	const transitionDone = 94;
 
 	return (
 		<div style={{flex: 1, backgroundColor: 'white'}}>
 			<div style={{opacity}}>
 				<Sequence from={0} durationInFrames={videoConfig.durationInFrames}>
-					<Logo transitionStart={transitionStart} />
+					<Logo />
 				</Sequence>
-				<Sequence from={transitionStart + 500} durationInFrames={Infinity}>
+				<Sequence from={transitionDone} durationInFrames={Infinity}>
 					<Title titleText={titleText} titleColor={titleColor} />
 				</Sequence>
-				<Sequence from={transitionStart + 500} durationInFrames={Infinity}>
-					<Subtitle />
+				<Sequence from={transitionDone} durationInFrames={Infinity}>
+					<ConfettiEffect />
 				</Sequence>
 				<Sequence from={0} durationInFrames={Infinity}>
 					<BGTheme />
