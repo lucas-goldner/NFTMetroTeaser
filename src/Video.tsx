@@ -1,16 +1,15 @@
-import {Audio, Composition} from 'remotion';
-import bgMusic from '../assets/sounds/TeaserTheme.mp3';
-import {HelloWorld} from './HelloWorld';
-import {Logo} from './HelloWorld/Logo';
-import {Subtitle} from './HelloWorld/Subtitle';
-import {Title} from './HelloWorld/Title';
+import {Composition} from 'remotion';
+import {MainVideo} from './MainVideo';
+import {Logo} from './MainVideo/Logo';
+import {Subtitle} from './MainVideo/Subtitle';
+import {Title} from './MainVideo/Title';
 
 export const RemotionVideo: React.FC = () => {
 	return (
 		<>
 			<Composition
-				id="HelloWorld"
-				component={HelloWorld}
+				id="MainVideo"
+				component={MainVideo}
 				durationInFrames={150}
 				fps={30}
 				width={1920}
@@ -48,7 +47,14 @@ export const RemotionVideo: React.FC = () => {
 				width={1920}
 				height={1080}
 			/>
-			<Audio src={bgMusic} />
+			<Composition
+				id="BGTheme"
+				component={Subtitle}
+				durationInFrames={100}
+				fps={30}
+				width={1920}
+				height={1080}
+			/>
 		</>
 	);
 };
